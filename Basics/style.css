@@ -1,0 +1,9 @@
+.container{
+    margin-left: 30%;    
+}
+.list-items{
+    background-color: bisque;
+    width: max-content;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}

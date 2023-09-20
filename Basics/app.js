@@ -12,7 +12,7 @@ console.log(document);
 
 //2. accessing the elements of document object model from its root node-> document
 // we can have access to particular node's properties,attributes,content,etc.
-console.log(document.getElementById('heading'));
+console.log(document.getElementById('main-heading'));
 
 // storing it in variable so that we can manipulate that element.
 let heading=document.getElementsByTagName('h1');
@@ -27,7 +27,7 @@ let container=document.getElementsByClassName('container');
 
 console.log(heading[0].style); // --> tagName selector returns an array of elements 
 listItem.style.color='green';
-let h=document.getElementById('heading');
+let h=document.getElementById('main-heading');
 h.style.color='red';
 
 // 4.accessing content inside element  --> all 3 are different
@@ -47,7 +47,26 @@ for(let i=0;i<listItems.length;i++){
 let ul=document.querySelector('ul');
 let li=document.createElement('li');
 
+
 ul.append(li);
+li.innerText='Learning new Technology';
 
+// Modifying Attribute & Classes
+// li.className='list-items';
+li.setAttribute('class','list-items');
 
+// removing Attribute
+li.removeAttribute('class');
 
+// getting Attribute
+const title=document.getElementById('main-heading');
+console.log(title.getAttribute('id'));
+
+// we can add no. of classes 
+li.classList.add('list-items') 
+
+// determining whether element contains specific class
+console.log(li.classList.contains('list-items'));
+
+// Remove elements
+// li.remove();
